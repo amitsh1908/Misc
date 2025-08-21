@@ -1,5 +1,4 @@
 import express from "express";
-import pool from "./src/db/connection.js";
 import authRoutes from "./src/route/authRoutes.js";
 import { logger } from "./src/middleware/logger.js";
 const app = express();
