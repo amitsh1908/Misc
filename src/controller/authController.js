@@ -5,7 +5,7 @@ export const renderHome = (req, res) => {
   res.render("index.ejs");
 };
 
-export ; const loginUser = (req, res) => {
+export const loginUser = (req, res) => {
   const { username, password } = req.body;
 
   // console.log("Received:", username, password);
