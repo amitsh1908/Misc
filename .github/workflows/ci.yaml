@@ -1,0 +1,26 @@
+name: Lint Check
+
+on:
+  push:
+    branches: [ main ]     # jab bhi main branch me push hoga
+  pull_request:
+    branches: [ main ]     # jab bhi PR create/update hoga
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3   # repo ka code fetch karega
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'        # apne project ka Node.js version daalna
+
+      - name: Install dependencies
+        run: npm install            # node_modules install karega
+
+      - name: Run Linter
+        run: npm run lint           # lint command run karega
