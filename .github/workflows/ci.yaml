@@ -3,8 +3,7 @@ name: Lint Check
 on:
   push:
     branches: [ main ]     # jab bhi main branch me push hoga
-  pull_request:
-    branches: [ main ]     # jab bhi PR create/update hoga
+ 
 
 jobs:
   lint:
